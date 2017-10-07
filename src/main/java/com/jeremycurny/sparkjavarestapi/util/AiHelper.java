@@ -53,9 +53,9 @@ public class AiHelper {
                 String[] infos = column[j + 1].split(",");
                 map.get(j).add(
                         new Tile(
-                                Integer.parseInt(infos[0]),
+                                Integer.parseInt((infos[2].substring(0, infos[2].indexOf('}')))),
                                 Integer.parseInt(infos[1]),
-                                Integer.parseInt((infos[2].substring(0, infos[2].indexOf('}'))))));
+                                        Integer.parseInt(infos[0])));
             }
         }
         return map;

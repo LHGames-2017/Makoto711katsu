@@ -31,7 +31,7 @@ public class ActionContent {
 
         obj.put("ActionName", ActionName);
         if (!Content.isEmpty()) {
-            obj.put("ActionContent", Content);
+            obj.put("Content", Content);
         }
 
         return obj.toJSONString();

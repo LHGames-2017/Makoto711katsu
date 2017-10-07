@@ -2,6 +2,7 @@ package com.jeremycurny.sparkjavarestapi.app;
 
 import static spark.Spark.*;
 
+import com.jeremycurny.sparkjavarestapi.util.AiHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +16,7 @@ public class App {
 
 		UserController userController = new UserController();
 
-		port(3000);
+		port(8080);
 
 		before((req, res) -> {
 			res.header("Access-Control-Allow-Headers", "Authorization, Content-Type");
@@ -31,5 +32,8 @@ public class App {
 			res.status(500);
 			res.body(message);
 		});
+
+
+
 	}
 }
